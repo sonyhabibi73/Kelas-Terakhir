@@ -35,7 +35,10 @@ define gui.about = _p("""
 Visual novel pendek tentang satu kelas sore, dua mapel bahasa,
 dan satu kesempatan terakhir untuk benar-benar mengerti.
 
-Dibuat dengan Ren'Py.
+Dibuat dengan Ren'Py 8.5.
+
+Musik: Chopin, rekaman Musopen (CC0).
+Efek suara: dibuat sendiri untuk proyek ini.
 """)
 
 

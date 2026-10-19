@@ -505,3 +505,49 @@ testcase jepang_smoke:
 
 
 
+
+
+
+testcase saveload_kuis:
+    # Simpan di tengah soal, keluar ke menu, muat lagi, lanjutkan kuis.
+    click id "kartu_id"
+    advance until screen "kuis_soal"
+
+    # Q1 + Q2 benar (tanpa hint).
+    click id "pilihan_0"
+    advance until screen "penjelasan"
+    click id "penjelasan_lanjut"
+    advance until screen "kuis_soal"
+
+    click id "pilihan_0"
+    advance until screen "penjelasan"
+    click id "penjelasan_lanjut"
+    advance until screen "kuis_soal"
+
+    # Q3: hint termahal (mandiri 100 -> 65), lalu simpan di tengah soal.
+    click id "hint_buka"
+    assert id "hint_2" timeout 10.0
+    click id "hint_2"
+    advance until screen "kuis_soal"
+    $ assert mandiri == 65, "mandiri sebelum simpan = %r" % (mandiri,)
+    $ assert benar == 2, "benar sebelum simpan = %r" % (benar,)
+
+    $ renpy.save("uji_saveload")
+
+    run MainMenu(confirm=False)
+    assert screen "main_menu" timeout 10.0
+
+    $ renpy.load("uji_saveload")
+    pause 0.5
+
+    assert screen "kuis_soal" timeout 10.0
+    $ assert mandiri == 65, "mandiri setelah muat = %r" % (mandiri,)
+    $ assert benar == 2, "benar setelah muat = %r" % (benar,)
+
+    # Kuis tetap bisa dilanjutkan.
+    click id "pilihan_0"
+    advance until screen "penjelasan"
+    click id "penjelasan_lanjut"
+    assert screen "kuis_soal" timeout 10.0
+
+    $ renpy.unlink_save("uji_saveload")
