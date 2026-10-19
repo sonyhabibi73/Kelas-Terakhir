@@ -45,22 +45,18 @@ SPRITE — IBU 1 ekspresi: ada
   char ibu senyum   -> images/char/ibu_senyum.png   (432x578)
 
 
-SPRITE — SAKURABA-SENSEI 3 ekspresi: 2 ada, 1 BELUM
----------------------------------------------------
-  char sakuraba netral -> images/char/sakuraba_netral.png  (432x578) ADA
-  char sakuraba puas   -> images/char/sakuraba_puas.png    (432x578) ADA
-  char sakuraba tegas  -> BELUM. Dipakai di ending C mapel Jepang.
-                          Butuh images/char/sakuraba_tegas.png
+SPRITE — SAKURABA-SENSEI 3 ekspresi: semua ada
+----------------------------------------------
+  char sakuraba netral -> images/char/sakuraba_netral.png  (432x578)
+  char sakuraba puas   -> images/char/sakuraba_puas.png    (432x578)
+  char sakuraba tegas  -> images/char/sakuraba_tegas.jpeg  (432x578)
 
 
-SPRITE — BU RINA 3 ekspresi: SEMUA BELUM
-----------------------------------------
+SPRITE — BU RINA 3 ekspresi: semua ada
+--------------------------------------
   char rina netral -> images/char/rina_netral.png
   char rina tegas  -> images/char/rina_tegas.png
   char rina puas   -> images/char/rina_puas.png
-  (guru wanita Indonesia 30-an, batik)
-  Dipakai di semua ending mapel Indonesia, jadi saat ini ketiganya
-  tampil sebagai placeholder.
 
 
 FILE EKSTRA (ada di folder, belum dipakai di script)
@@ -101,6 +97,22 @@ Headless (tanpa X/GL):
         ./renpy.sh . test global --report-detailed
 
 Testcase aset_prolog gagal kalau ada file aset yang hilang atau salah nama.
+
+
+GUI (BUKAN DI FOLDER INI)
+=========================
+Aset tampilan game ada di game/gui_pack/ — hasil olahan dari paket
+VisualNovelDialogueGUI_PNG di akar proyek:
+
+    box_*.png     kotak dialog per warna (biru/pink/oranye/hijau/ungu/kuning)
+    tab_*.png     tab nama per warna, menempel di kiri atas kotak dialog
+    pill_*.png    tombol pill (idle/hover/mati/utama) untuk semua layar
+    icon_*.png    ikon bulat menu cepat (riwayat, muat, setting, otomatis,
+                  lompati, simpan)
+    badge_*.png   kotak status dengan bulatan aksen
+
+Palet dan gaya dipakai di 00_gui_pack.rpy (PK_*). Folder sumber tetap
+utuh sebagai perpustakaan; jangan diedit langsung.
 
 
 CATATAN PENTING

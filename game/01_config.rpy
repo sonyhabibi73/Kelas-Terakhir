@@ -11,21 +11,24 @@
 # ---------------------------------------------------------------------------
 # KARAKTER
 # ---------------------------------------------------------------------------
-# Textbox per karakter:
-#   Rei (MC)       → textbox_light_blue.png
-#   Hina           → textbox_light_pink.png
-#   Ibu, Sakuraba, Bu Rina → textbox.png (default)
+# Kotak dialog & tab nama per karakter (aset paket di gui_pack/):
+#   Rei (MC)       → biru
+#   Hina           → pink
+#   Ibu            → oranye
+#   Sakuraba      → hijau
+#   Bu Rina        → ungu
+#   Narasi (tanpa nama) → kuning, dari style.window
 
 default nama_mc      = "Rei"
 default nama_hina    = "Hina"
 default nama_guru_jp = "Sakuraba-sensei"
 default nama_guru_id = "Bu Rina"
 
-define r    = Character("[nama_mc]",      color="#c9dcff", window_background="gui/textbox.png")
-define h    = Character("[nama_hina]",    color="#ff799f", window_background="gui/textbox.png")
-define ibu  = Character("Ibu",            color="#e8c9a0", window_background="gui/textbox.png")
-define sk   = Character("[nama_guru_jp]", color="#bfe3a6", window_background="gui/textbox.png")
-define rina = Character("[nama_guru_id]", color="#ffd9a0", window_background="gui/textbox.png")
+define r    = Character("[nama_mc]",      window_background=pk_kotak("rei"),      namebox_background=pk_tab("rei"))
+define h    = Character("[nama_hina]",    window_background=pk_kotak("hina"),     namebox_background=pk_tab("hina"))
+define ibu  = Character("Ibu",            window_background=pk_kotak("ibu"),      namebox_background=pk_tab("ibu"))
+define sk   = Character("[nama_guru_jp]", window_background=pk_kotak("sakuraba"), namebox_background=pk_tab("sakuraba"))
+define rina = Character("[nama_guru_id]", window_background=pk_kotak("rina"),     namebox_background=pk_tab("rina"))
 
 
 # ---------------------------------------------------------------------------

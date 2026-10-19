@@ -241,20 +241,41 @@ screen quick_menu():
     ## Memastikan ini muncul di atas layar yang lain.
     zorder 100
 
-    if quick_menu:
+    ## Ikon bulat dari paket GUI. Kolom kiri dan kanan kotak dialog,
+    ## sama seperti contoh di VisualNovelDialogueGUI_PNG. Disembunyikan saat
+    ## layar modal kustom tampil supaya tidak menumpuk panel.
+    if quick_menu and not (renpy.get_screen("layar_nama") or renpy.get_screen("pilih_mapel") or renpy.get_screen("penjelasan") or renpy.get_screen("rapor") or renpy.get_screen("akhir_mapel")):
 
-        hbox:
-            style_prefix "quick"
-            style "quick_menu"
+        vbox:
+            xpos 16
+            yalign 1.0
+            yoffset -40
+            spacing 10
 
-            textbutton _("Kembali") action Rollback()
-            textbutton _("Riwayat") action ShowMenu('history')
-            textbutton _("Lompati") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Otomatis") action Preference("auto-forward", "toggle")
-            textbutton _("Simpan") action ShowMenu('save')
-            textbutton _("Simpan.C") action QuickSave()
-            textbutton _("Muat.C") action QuickLoad()
-            textbutton _("Setting") action ShowMenu('preferences')
+            imagebutton auto "gui_pack/icon_history_%s.png" action ShowMenu('history') tooltip _("Riwayat") alt _("Riwayat")
+            imagebutton auto "gui_pack/icon_load_%s.png" action ShowMenu('load') tooltip _("Muat") alt _("Muat")
+            imagebutton auto "gui_pack/icon_options_%s.png" action ShowMenu('preferences') tooltip _("Pengaturan") alt _("Pengaturan")
+
+        vbox:
+            xpos 1840
+            yalign 1.0
+            yoffset -40
+            spacing 10
+
+            imagebutton auto "gui_pack/icon_continue_%s.png" action Preference("auto-forward", "toggle") tooltip _("Otomatis") alt _("Otomatis")
+            imagebutton auto "gui_pack/icon_skip_%s.png" action Skip() alternate Skip(fast=True, confirm=True) tooltip _("Lompati") alt _("Lompati")
+            imagebutton auto "gui_pack/icon_save_%s.png" action ShowMenu('save') tooltip _("Simpan") alt _("Simpan")
+
+        ## Nama tombol muncul saat ikon disorot.
+        if GetTooltip():
+
+            frame:
+                style "pk_tooltip"
+                xalign 0.5
+                yalign 1.0
+                yoffset -350
+
+                text GetTooltip() style "pk_tooltip_text"
 
 
 ## Kode ini memastikan layar quick_menu di tampilkan di dalam permainan,

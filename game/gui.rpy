@@ -26,7 +26,7 @@ define config.check_conflicting_properties = True
 ## Warna text pada antarmuka.
 
 ## Warna aksen yang digunakan sepanjang interface sampai pewarnaan text.
-define gui.accent_color = '#e0b34c'
+define gui.accent_color = '#ba464c'
 
 ## Warna yang di gunakan untuk warna tombol text jika di pilih atau di tekan.
 define gui.idle_color = '#9aa6b2'
@@ -36,7 +36,7 @@ define gui.idle_color = '#9aa6b2'
 define gui.idle_small_color = '#b8c2cc'
 
 ## Warna yang di gunakan untuk tombol dan bar yang di pilih.
-define gui.hover_color = '#ffd27f'
+define gui.hover_color = '#d37c9f'
 
 ## Warna yang digunakan untuk text tombol ketika di pijit tapi tidak di fokus.
 ## Tombol di pilih jika terdapat di layar saat ini atau value preferensi.
@@ -48,8 +48,8 @@ define gui.insensitive_color = '#8888887f'
 ## Warna yang di gunakan untuk beberapa bagian dari bar yang tidak terisi. Ini
 ## tidak di gunakan secara langsung, Tapi di gunakan ketika me regenerasi file
 ## gambar bar.
-define gui.muted_color = '#5a4a28'
-define gui.hover_muted_color = '#7a6438'
+define gui.muted_color = '#3a3f47'
+define gui.hover_muted_color = '#4a5058'
 
 ## Warna yang di gunakan untuk dialog dan text pilihan menu.
 define gui.text_color = '#f0e6d2'
