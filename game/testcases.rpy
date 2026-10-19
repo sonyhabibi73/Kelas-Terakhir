@@ -80,6 +80,10 @@ testcase indonesia_lengkap:
 
     assert eval (mapel_aktif == "id")
     assert eval (bahasa_aktif == "id")
+
+    # Beat guru khas rute Indonesia: Bu Rina tanya kata baku.
+    advance until "Mana yang baku"
+    assert "Mana yang baku" timeout 10.0
     advance until screen "kuis_soal"
 
     # Q1 — hint gratis (warm-up)
@@ -140,6 +144,10 @@ testcase indonesia_lengkap:
     click id "pilihan_0"
     advance until screen "penjelasan"
     click id "penjelasan_lanjut"
+
+    # Hening sebelum nilai keluar (beat cerita sebelum rapor).
+    advance until "Yang kamu ngerti"
+    assert "Yang kamu ngerti" timeout 10.0
 
     # Guru membaca hasil, lalu rapor.
     advance until screen "rapor"
@@ -405,6 +413,10 @@ testcase jepang_lengkap:
     click id "kartu_ja"
 
     assert eval (mapel_aktif == "ja")
+
+    # Beat guru khas rute Jepang: Sakuraba-sensei minta baca satu kalimat.
+    advance until "baca satu kalimat"
+    assert "baca satu kalimat" timeout 10.0
     advance until screen "kuis_soal"
 
     # Q1
@@ -454,6 +466,10 @@ testcase jepang_lengkap:
     advance until screen "penjelasan"
     click id "penjelasan_lanjut"
 
+    # Hening sebelum nilai keluar (beat cerita sebelum rapor).
+    advance until "Sekarang tinggal nunggu"
+    assert "Sekarang tinggal nunggu" timeout 10.0
+
     advance until screen "rapor"
     assert eval (benar == 8)
     assert eval (mandiri == 100)
@@ -486,3 +502,4 @@ testcase jepang_smoke:
     assert "Lanjut" timeout 10.0
     click id "penjelasan_lanjut"
     assert screen "kuis_soal" timeout 10.0
+

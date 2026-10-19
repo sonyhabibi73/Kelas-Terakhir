@@ -78,6 +78,12 @@ label interlude_kantin:
     h "Kalau kamu cuma nebak dan kebetulan benar, besok kamu bakal salah lagi."
     h "Jadi, mending salah tapi alasannya jelas, daripada benar tapi nggak tahu kenapa."
     r "Itu agak menghibur."
+    r "Kamu kenapa begitu soal 'harus bisa dijelasin'?"
+    h "……Karena aku pernah lolos satu tahap cuma karena nebak."
+    h "Waktu ditanya alasannya, aku nggak bisa ngomong apa-apa. Gurunya diam, aku juga."
+    h "Nilainya naik. Tapi aku tahu aku nggak ngerti apa-apa."
+    r "……"
+    h "Aku nggak mau ngerasain itu lagi. Dan aku nggak mau kamu ngerasain."
 
     show char hina fokus at kanan with dissolve
 

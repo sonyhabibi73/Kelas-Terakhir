@@ -215,6 +215,24 @@ label chapter_indonesia:
     r "……itu tadi berlebihan."
     h "Sedikit. Sekarang mulai."
 
+    # Pemanasan dari guru, bukan dari Hina (khas rute Indonesia).
+    show char rina netral at kiri with dissolve
+
+    rina "Sebelum soal pertama, satu pertanyaan dari saya."
+    rina "Mana yang baku: 'nggak' atau 'tidak'?"
+    r "……'Tidak', Bu."
+    rina "Kenapa?"
+    r "Karena 'nggak' cuma bahasa lisan. Di tulisan resmi, kata bakunya 'tidak'."
+
+    show char rina puas at kiri with dissolve
+
+    rina "Bagus. Saya tidak menilai hafalan. Saya menilai kamu tahu alasannya."
+    "（Bu Rina kembali ke mejanya. Batik di lengannya masih terlipat rapi.）"
+
+    show char hina netral at kanan with dissolve
+
+    h "……Jawaban itu dari dia, bukan dari aku."
+
     # Beat 1 — pemanasan (2 soal, hint gratis)
     "Dua soal pertama memang terasa lebih ringan. Hina tidak banyak bicara, hanya sesekali mengetuk meja."
 
@@ -253,5 +271,16 @@ label chapter_indonesia:
     call satu_soal(SOAL_ID, 6, teks)
     call satu_soal(SOAL_ID, 7, teks)
 
-    # Beat 6 — penilaian
+    # Beat 6 — hening sebelum nilai keluar: musik berhenti, tidak ada dialog dulu.
+    stop music fadeout 2.0
+
+    "Aku menutup jawaban soal terakhir. Ruang elektif yang tadi diisi lima orang sekarang tinggal kami."
+    "Bu Rina merapikan buku nilainya pelan-pelan, seperti sengaja memberi waktu."
+    "Hina menyeruput air dari botolnya, lalu menutup botol itu tanpa suara."
+
+    show char hina netral at kanan with dissolve
+
+    h "……"
+    h "Nilainya cuma angka. Yang kamu ngerti, itu yang kamu bawa pulang."
+
     jump penilaian

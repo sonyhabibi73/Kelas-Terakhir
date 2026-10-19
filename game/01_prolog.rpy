@@ -27,6 +27,13 @@ label prolog:
     "Aku berdiri di depan pintu, merapikan seragam baru. Hari ini hari pertamaku di sekolah baru."
     "Aku sudah memeriksa tas tiga kali: buku, dompet, dan botol minum. Semuanya ada."
 
+    ibu "[nama_mc], kelas tambahannya mulai hari ini, ya?"
+    r "Iya. Dua minggu lagi program pertukarannya selesai."
+    ibu "Jadi ini kesempatan terakhir kamu belajar sama guru-guru itu."
+    r "……Iya, Bu."
+    ibu "Ibu nggak minta nilai kamu bagus. Ibu cuma mau kamu ngerti apa yang kamu pelajari."
+    r "Aku tahu."
+
     ibu "[nama_mc], sarapan dulu. Jangan sampai telat di hari pertama."
     r "Iya, Bu. Aku sudah makan."
     ibu "Jangan lupa bawa buku dan dompet. Kalau ada apa-apa, telepon Ibu."
@@ -34,6 +41,7 @@ label prolog:
     ibu "Hati-hati di jalan."
 
     "Ibu melambaikan tangan sampai aku menghilang di tikungan."
+    "Dua minggu. Setelah itu guru-guru pertukaran itu pulang, dan kelas tambahan ini selesai."
     "Aku menarik napas panjang. Sekolah baru, wajah-wajah baru. Semoga semuanya berjalan lancar."
 
 
@@ -94,6 +102,9 @@ label prolog:
     h "Oh iya, hari ini ada kelas tambahan. Kamu mau ikut yang mana?"
     r "Kelas tambahan?"
     h "Iya. Ada kelas bahasa Jepang dan kelas bahasa Indonesia. Dua-duanya lumayan menantang."
+    h "Program pertukarannya selesai dua minggu lagi. Yang nilainya bagus bisa lanjut ke kelas tingkat lanjut."
+    r "Kamu ikut?"
+    h "Ikut. Aku juga butuh lanjut."
     r "Aku belum tahu harus pilih yang mana."
     h "Ya pilih yang kamu mau. Aku ikut kamu."
 

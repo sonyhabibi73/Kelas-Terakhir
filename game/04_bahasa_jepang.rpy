@@ -206,6 +206,25 @@ label chapter_jepang:
     r "Bagus. Aku hampir panik tadi."
     h "Jangan panik. Baca pelan-pelan. Sekarang mulai."
 
+    # Pemanasan dari guru, bukan dari Hina (khas rute Jepang).
+    show char sakuraba netral at kiri with dissolve
+
+    sk "Sebelum mulai, baca satu kalimat. Keras-keras."
+    r "……はい."
+    sk "「わたしは がくせい です」. Baca dulu. Jangan diterjemah."
+    r "Watashi wa gakusei desu."
+    sk "Kenapa 'wa', bukan 'ga'?"
+
+    show char sakuraba puas at kiri with dissolve
+
+    r "Karena…… itu penanda topik. Yang jadi topiknya 'aku'."
+    sk "Bagus. Itu sebabnya aku menilai alasannya, bukan cuma jawabannya."
+    "（Sakuraba-sensei kembali ke mejanya tanpa menoleh lagi.）"
+
+    show char hina senyum-mata at kanan with dissolve
+
+    h "……Itu pemanasan dari dia, bukan dari aku."
+
     "Dua soal pertama memang terasa lebih ringan. Hina tidak banyak bicara, hanya sesekali mengetuk meja."
 
     call satu_soal(SOAL_JA, 0, teks)
@@ -240,5 +259,18 @@ label chapter_jepang:
 
     call satu_soal(SOAL_JA, 6, teks)
     call satu_soal(SOAL_JA, 7, teks)
+
+    # Hening sebelum nilai keluar: musik berhenti, tidak ada dialog dulu.
+    stop music fadeout 2.0
+
+    "Aku menekan jawaban untuk soal terakhir. Setelah ini tidak ada soal lagi."
+    "Di luar, langit sudah jingga penuh. Lampu ruang kelas terasa lebih terang dari tadi."
+    "Sakuraba-sensei berhenti berjalan di depan papan. Hina menutup buku catatannya."
+    "Tidak ada yang bicara. Yang terdengar cuma suara jam dinding."
+
+    show char hina netral at kanan with dissolve
+
+    h "……"
+    h "Sekarang tinggal nunggu."
 
     jump penilaian
