@@ -23,21 +23,28 @@ BACKGROUND — 5 dari 5 ada
 Semua 1920x1080. Nama file harus persis; kalau tidak, placeholder muncul.
 
 
-SPRITE — HINA 5 ekspresi: semua ada
+SPRITE — HINA 8 ekspresi: semua ada
 -----------------------------------
-  char hina netral  -> images/char/hina_netral.png   (481x1059)
-  char hina senyum  -> images/char/hina_senyum.png   (481x1059)
-  char hina fokus   -> images/char/hina_fokus.png    (325x767)
-  char hina kaget   -> images/char/hina_kaget.png    (325x767)
-  char hina kecewa  -> images/char/hina_kecewa.png   (325x767)
+  char hina netral        -> images/char/hina_netral.png                  (481x1059)
+  char hina senyum        -> images/char/hina_senyum.png                  (481x1059)
+  char hina senyum-buka   -> images/char/hina_senyum-mulut-terbuka.png    (481x1059)
+  char hina senyum-mata   -> images/char/hina_senyum-tutupmata.png        (481x1059)
+  char hina tertawa       -> images/char/hina_ketawa+tutupmata.png        (481x1059)
+  char hina fokus         -> images/char/hina_fokus.png                   (325x767)
+  char hina kaget         -> images/char/hina_kaget.png                   (325x767)
+  char hina kecewa        -> images/char/hina_kecewa.png                  (325x767)
 
 Hina ditampilkan SETENGAH BADAN (kepala sampai pinggang), bukan full body.
 Di 00_images.rpy dipakai _bust(nama, fallback, puncak, tinggi):
   - gambar dipotong dari atas sampai `puncak`
   - hasil potongan diskalakan ke `tinggi` piksel (BUST_HINA = 600)
-  - netral/senyum puncak 592, fokus/kaget/kecewa puncak 429
+  - netral/senyum/tertawa/senyum-* puncak 592, fokus/kaget/kecewa puncak 429
 Tinggi yang sama untuk semua ekspresi = ukuran Hina tidak berubah-ubah.
 Kalau ganti gambar Hina, sesuaikan angka `puncak` (garis pinggang).
+
+Ganti ekspresi di tengah adegan pakai `show ... with dissolve`, biar tidak
+potong keras. Contohnya ada di prolog, interlude kantin, chapter Jepang/
+Indonesia, dan ending A/B/C.
 
 
 SPRITE — IBU 1 ekspresi: ada
@@ -59,20 +66,19 @@ SPRITE — BU RINA 3 ekspresi: semua ada
   char rina puas   -> images/char/rina_puas.png
 
 
-FILE EKSTRA (ada di folder, belum dipakai di script)
-====================================================
-  images/char/hina_senyum-mulut-terbuka.png
-  images/char/hina_senyum-tutupmata.png
-  images/char/hina_ketawa+tutupmata.png
-  images/char/sakuraba.png                     (746x1148, versi besar guru)
-  images/char/Gemini_Generated_Image_...jpeg    (art Ibu versi mentah)
-  images/bg/pintu.png                           (latar pintu, 1920x1080)
+FILE EKSTRA
+===========
+Tidak ada lagi. Semua file di images/char dan images/bg sudah dipetakan ke
+00_images.rpy dan dipakai di cerita. Tiga ekspresi Hina yang dulu menganggur
+(senyum-mulut-terbuka, senyum-tutupmata, ketawa+tutupmata) sekarang dipakai
+di prolog, interlude, chapter Jepang/Indonesia, dan ending A/B/C.
 
-Kalau mau dipakai, tambahkan satu baris image di 00_images.rpy, contoh
+Kalau nanti menambah file baru, tambahkan satu baris image di 00_images.rpy,
+contoh
 
-    image char hina tertawa = _bust(
-        "char/hina_ketawa+tutupmata",
-        _ph_char("#d98aa8", "HINA", "tertawa", ""),
+    image char hina melambai = _bust(
+        "char/hina_melambai",
+        _ph_char("#d98aa8", "HINA", "melambai", ""),
         592,
         BUST_HINA,
     )

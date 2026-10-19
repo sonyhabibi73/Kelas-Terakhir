@@ -176,7 +176,7 @@ label chapter_indonesia:
     $ teks = TEKS_ID
 
     scene bg kelas sore with fade
-    show char hina netral at kanan
+    show char hina senyum-buka at kanan
 
     "Kelas sore. Cahaya dari jendela bergerak pelan di atas meja."
     "Kelas elektif bahasa Indonesia. Cuma lima orang, dan tidak ada native speaker."
@@ -187,9 +187,14 @@ label chapter_indonesia:
     r "Iya. Kamu kenapa masih di sini?"
     h "Penasaran. Katanya Bu Rina galak."
     r "Jangan bikin aku makin takut."
+
+    show char hina senyum-mata at kanan with dissolve
+
     h "Santai. Aku cuma nonton."
 
     "Hina duduk di kursi sebelah, membuka buku catatannya."
+
+    show char hina fokus at kanan with dissolve
 
     h "Tapi sebelum mulai, aku mau kasih aturan main."
     r "Kamu bukan gurunya."
@@ -202,6 +207,9 @@ label chapter_indonesia:
     h "Dua soal pertama pemanasan. Petunjuknya gratis."
     h "Sisanya, kamu yang pilih: mau minta arahan, strategi, atau hampir jawaban."
     r "Kayak beli petunjuk di game."
+
+    show char hina tertawa at kanan with dissolve
+
     h "Bedanya, ini hidupmu."
     r "……itu tadi berlebihan."
     h "Sedikit. Sekarang mulai."
@@ -223,6 +231,9 @@ label chapter_indonesia:
 
     h "Mulai dari sini, tiap petunjuk ada harganya. Pilih dengan sadar."
     r "Kalau aku salah pilih?"
+
+    show char hina senyum-mata at kanan with dissolve
+
     h "Ya tinggal dijelaskan. Salah itu bukan akhir."
 
     call satu_soal(SOAL_ID, 2, teks)

@@ -206,6 +206,28 @@ image char hina kecewa = _bust(
     BUST_HINA,
 )
 
+# Tiga ekspresi tambahan (dulu menganggur di folder, sekarang dipakai).
+image char hina tertawa = _bust(
+    "char/hina_ketawa+tutupmata",
+    _ph_char("#d98aa8", "HINA", "tertawa", "tertawa lebar, mata tertutup"),
+    592,
+    BUST_HINA,
+)
+
+image char hina senyum-mata = _bust(
+    "char/hina_senyum-tutupmata",
+    _ph_char("#d98aa8", "HINA", "senyum mata tertutup", "senyum tulus"),
+    592,
+    BUST_HINA,
+)
+
+image char hina senyum-buka = _bust(
+    "char/hina_senyum-mulut-terbuka",
+    _ph_char("#d98aa8", "HINA", "senyum mulut terbuka", "senyum ceria"),
+    592,
+    BUST_HINA,
+)
+
 
 # ---------------------------------------------------------------------------
 # SPRITE — SAKURABA-SENSEI (3 ekspresi)

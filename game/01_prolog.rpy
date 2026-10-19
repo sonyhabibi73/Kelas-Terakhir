@@ -52,14 +52,14 @@ label prolog:
     h "Aduh!"
     r "Maaf! Aku tidak lihat—"
 
-    show char hina netral at kanan
+    show char hina netral at kanan with dissolve
 
     h "Kamu murid baru ya?"
     r "Iya."
     h "Kelas berapa kamu?"
     r "Kelas 11 IPA 2."
 
-    show char hina senyum at kanan
+    show char hina senyum at kanan with dissolve
 
     h "Kita sekelas. Ayo ikut aku, kita udah mau telat."
 
@@ -72,18 +72,21 @@ label prolog:
     # -----------------------------------------------------------------------
 
     scene bg kelas sore with fade
-    show char hina senyum at kanan
+    show char hina senyum-buka at kanan
 
     "Kami sampai di kelas tepat saat bel berbunyi."
 
     h "Selamat datang di kelas 11 IPA 2. Aku Hina."
     r "Rei. Terima kasih sudah menunjukkan jalan."
+
+    show char hina senyum-mata at kanan with dissolve
+
     h "Sama-sama. Nanti kalau ada yang bingung, tanya aku saja."
 
     "Hari pertama berjalan lebih cepat dari yang aku bayangkan."
     "Hina banyak membantuku: menunjukkan loker, menjelaskan jadwal, dan memperkenalkanku ke beberapa teman sekelas."
 
-    show char hina netral at kanan
+    show char hina netral at kanan with dissolve
 
     "Saat pelajaran terakhir selesai, Hina menoleh ke arahku."
 

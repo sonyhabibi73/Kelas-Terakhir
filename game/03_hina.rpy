@@ -36,6 +36,9 @@ label interlude_koridor:
     "Koridor sekolah sudah sepi. Yang tersisa cuma suara lampu neon dan langkah kami."
     h "Jeda pertama. Gimana? Pemanasan tadi aman?"
     r "Aman karena petunjuknya gratis."
+
+    show char hina senyum-buka at kanan with dissolve
+
     h "Berarti kamu sadar. Bagus."
     h "Mulai sekarang, tiap petunjuk ada harganya. Arahan 10, strategi 20, hampir jawaban 35."
     r "Yang 35 itu praktis jawabannya, ya?"
@@ -61,12 +64,18 @@ label interlude_kantin:
     r "Sedikit."
     h "Cuma sedikit?"
     r "Ya. Karena aku tahu kenapa aku salah."
+
+    show char hina tertawa at kanan with dissolve
+
     h "Nah. Itu bagus."
     r "Masa salah itu bagus?"
     h "Bukan salahnya. Tapi kamu tahu alasannya. Itu bedanya sama orang yang benar karena untung."
     h "Kalau kamu cuma nebak dan kebetulan benar, besok kamu bakal salah lagi."
     h "Jadi, mending salah tapi alasannya jelas, daripada benar tapi nggak tahu kenapa."
     r "Itu agak menghibur."
+
+    show char hina fokus at kanan with dissolve
+
     h "Dua soal terakhir berat. Tapi kamu udah punya bekal. Jangan buru-buru."
 
     return

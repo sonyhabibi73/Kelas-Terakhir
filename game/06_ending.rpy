@@ -97,12 +97,21 @@ label ending_a:
     show char hina senyum at kanan
 
     "Udara kelas mereda. Suara detak jam dinding terasa lebih pelan."
+
+    show char hina senyum-mata at kanan with dissolve
+
     h "……Syukurlah. Beneran."
     r "Berkat kamu."
+
+    show char hina senyum-buka at kanan with dissolve
+
     h "Nggak. Yang milih jawaban terakhir itu kamu."
     "（Hina menutup buku catatannya, lalu melihat ke luar jendela.)"
     h "Kata-kata itu bukan cuma buat dihafal. Dia dipilih."
     r "……Hari ini aku mulai ngerti."
+
+    show char hina tertawa at kanan with dissolve
+
     h "Iya. Muka kamu bilang gitu."
     "（Cahaya sore di meja terasa sedikit lebih hangat dari tadi.)"
 
@@ -131,6 +140,9 @@ label ending_b:
     h "Bagian ini, lain kali alasanmu harus bisa dijelaskan."
     r "Iya, Bu."
     h "Aku bukan Bu. ... Tapi ya udah."
+
+    show char hina senyum-mata at kanan with dissolve
+
     h "Sisanya, aku yang bantu selesaikan. Kamu nggak harus nanggung sendiri."
 
     call screen akhir_mapel(teks)
@@ -156,6 +168,9 @@ label ending_c:
     r "……"
     h "Besok kita ulang dari awal. Tanpa petunjuk. Satu per satu."
     r "Kamu mau bantuin lagi?"
+
+    show char hina senyum-mata at kanan with dissolve
+
     h "Ya iyalah."
     "（Aku tidak tahu harus menjawab apa. Tapi Hina tidak menunggu jawaban.)"
 

@@ -173,7 +173,7 @@ label chapter_jepang:
     $ teks = TEKS_ID
 
     scene bg kelas sore with fade
-    show char hina netral at kanan
+    show char hina senyum-buka at kanan
 
     "Kelas sore. Di luar, langit sudah mulai berwarna jingga."
     "Hari ini ada kelas tambahan bahasa Jepang bersama Sakuraba-sensei. Jujur, aku belum terlalu siap."
@@ -183,9 +183,14 @@ label chapter_jepang:
     r "Iya. Kamu kenapa masih di sini?"
     h "Penasaran. Katanya Sakuraba-sensei galak kalau soal partikel."
     r "Jangan bikin aku makin takut."
+
+    show char hina senyum-mata at kanan with dissolve
+
     h "Santai. Aku cuma nonton."
 
     "Hina duduk di kursi sebelah, membuka buku catatannya."
+
+    show char hina fokus at kanan with dissolve
 
     h "Tapi sebelum mulai, aku mau kasih aturan main."
     r "Kamu bukan gurunya."
@@ -214,6 +219,9 @@ label chapter_jepang:
 
     h "Mulai dari sini, tiap petunjuk ada harganya. Pilih dengan sadar."
     r "Kalau aku salah pilih?"
+
+    show char hina senyum-mata at kanan with dissolve
+
     h "Ya tinggal dijelaskan. Salah itu bukan akhir."
     h "Untuk soal Jepang, baca dulu kalimat Jepangnya, lalu romaji, lalu artinya. Jangan keburu lihat pilihan."
     r "Oke. Pelan-pelan."
