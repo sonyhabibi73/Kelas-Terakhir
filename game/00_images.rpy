@@ -169,7 +169,7 @@ image char ibu senyum = _aset(
 #   netral/senyum        481x1059 -> pinggang di y=592
 #   fokus/kaget/kecewa   325x767  -> pinggang di y=429
 
-define BUST_HINA = 600
+define BUST_HINA = 578
 
 image char hina netral = _bust(
     "char/hina_netral",
@@ -273,15 +273,24 @@ image char rina puas = _aset(
 # POSISI SPRITE
 # ---------------------------------------------------------------------------
 # kanan/kiri/tengah dipakai di script (show char ... at kanan)
+#
+# PK_ZOOM_SPRITE memperbesar sprite supaya tidak tenggelam di balik kotak
+# dialog. Semua sprite (Hina 578 px, guru/Ibu 578 px) naik ke ~820 px.
+# Kalau masih kekecilan atau kepotong di atas, ubah angka ini saja.
+
+define PK_ZOOM_SPRITE = 1.42
 
 transform kanan:
+    zoom PK_ZOOM_SPRITE
     xalign 0.86
     yalign 1.0
 
 transform kiri:
+    zoom PK_ZOOM_SPRITE
     xalign 0.14
     yalign 1.0
 
 transform tengah:
+    zoom PK_ZOOM_SPRITE
     xalign 0.5
     yalign 1.0

@@ -38,6 +38,9 @@ naik untuk petunjuk.
 
 Catatan
 -------
+- Volume semua efek suara diatur satu angka di 07_audio.rpy:
+  define PK_VOLUME_SFX = 0.5   (1.0 = sekeras berkas aslinya)
+  Musik latar tidak ikut terpengaruh; volume musik tetap di menu Pengaturan.
 - Berkas di sini dijalankan oleh fungsi putar_musik() dan putar_suara() di
   07_audio.rpy. Keduanya cek dulu berkasnya ada; kalau hilang, game tetap
   jalan tanpa suara.

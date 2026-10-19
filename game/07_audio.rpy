@@ -18,6 +18,12 @@
 init offset = 100
 
 
+# Volume semua efek suara (klik, benar, salah, hint).
+# 1.0 = sekeras berkas aslinya. Turunkan angka ini kalau masih terlalu keras,
+# naikkan kalau terlalu pelan. Musik latar tidak terpengaruh.
+define PK_VOLUME_SFX = 0.5
+
+
 init python:
 
     def putar_musik(nama, fade=1.5):
@@ -36,7 +42,7 @@ init python:
         jalur = "audio/" + nama
 
         if renpy.loadable(jalur):
-            renpy.sound.play(jalur, channel="sound")
+            renpy.sound.play("<%s>" % PK_VOLUME_SFX + jalur, channel="sound")
 
     # Musik layar judul (dipakai Ren'Py saat main menu tampil).
     if renpy.loadable("audio/bgm_menu.ogg"):
@@ -45,4 +51,4 @@ init python:
     # Bunyi klik halus untuk semua tombol (style button bawaan, jadi semua
     # textbutton/ikon menu cepat ikut). Dimatikan kalau berkasnya tidak ada.
     if renpy.loadable("audio/klik.wav"):
-        style.button.activate_sound = "audio/klik.wav"
+        style.button.activate_sound = "<%s>" % PK_VOLUME_SFX + "audio/klik.wav"

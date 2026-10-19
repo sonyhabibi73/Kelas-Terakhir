@@ -31,7 +31,8 @@ label prolog:
     r "Iya. Dua minggu lagi program pertukarannya selesai."
     ibu "Jadi ini kesempatan terakhir kamu belajar sama guru-guru itu."
     r "……Iya, Bu."
-    ibu "Ibu nggak minta nilai kamu bagus. Ibu cuma mau kamu ngerti apa yang kamu pelajari."
+    ibu "Ibu nggak minta nilai kamu bagus."
+    ibu "Ibu cuma mau kamu ngerti apa yang kamu pelajari."
     r "Aku tahu."
 
     ibu "[nama_mc], sarapan dulu. Jangan sampai telat di hari pertama."

@@ -37,10 +37,16 @@ SPRITE — HINA 8 ekspresi: semua ada
 Hina ditampilkan SETENGAH BADAN (kepala sampai pinggang), bukan full body.
 Di 00_images.rpy dipakai _bust(nama, fallback, puncak, tinggi):
   - gambar dipotong dari atas sampai `puncak`
-  - hasil potongan diskalakan ke `tinggi` piksel (BUST_HINA = 600)
+  - hasil potongan diskalakan ke `tinggi` piksel (BUST_HINA = 578)
   - netral/senyum/tertawa/senyum-* puncak 592, fokus/kaget/kecewa puncak 429
 Tinggi yang sama untuk semua ekspresi = ukuran Hina tidak berubah-ubah.
+578 dipakai supaya sama dengan tinggi asli sprite guru/Ibu (432x578).
 Kalau ganti gambar Hina, sesuaikan angka `puncak` (garis pinggang).
+
+Semua sprite diperbesar saat tampil oleh PK_ZOOM_SPRITE (1.42) di transform
+kanan/kiri/tengah, jadi di layar 1920x1080 tingginya sekitar 820 px dan kepala
+tidak tenggelam di balik kotak dialog. Kalau masih terasa kekecilan atau
+kepalanya kepotong di atas, ubah hanya angka PK_ZOOM_SPRITE itu.
 
 Ganti ekspresi di tengah adegan pakai `show ... with dissolve`, biar tidak
 potong keras. Contohnya ada di prolog, interlude kantin, chapter Jepang/

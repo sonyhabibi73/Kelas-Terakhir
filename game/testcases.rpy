@@ -313,9 +313,9 @@ testcase aset_prolog:
     $ assert _aset("char/ibu_senyum", None) == "images/char/ibu_senyum.png"
 
     # Hina setengah badan: semua ekspresi punya tinggi tampil yang sama.
-    $ assert renpy.render(_bust("char/hina_netral", None, 592), 1920, 1080, 0, 0).height == 600
-    $ assert renpy.render(_bust("char/hina_fokus", None, 429), 1920, 1080, 0, 0).height == 600
-    $ assert renpy.render(_bust("char/hina_kecewa", None, 429), 1920, 1080, 0, 0).height == 600
+    $ assert abs(renpy.render(_bust("char/hina_netral", None, 592, BUST_HINA), 1920, 1080, 0, 0).height - BUST_HINA) <= 1  # pembulatan gambar toleransi 1 px
+    $ assert abs(renpy.render(_bust("char/hina_fokus", None, 429, BUST_HINA), 1920, 1080, 0, 0).height - BUST_HINA) <= 1  # pembulatan gambar toleransi 1 px
+    $ assert abs(renpy.render(_bust("char/hina_kecewa", None, 429, BUST_HINA), 1920, 1080, 0, 0).height - BUST_HINA) <= 1  # pembulatan gambar toleransi 1 px
 
 
 testcase aset_audio:
@@ -332,9 +332,9 @@ testcase aset_audio:
     $ assert renpy.loadable("audio/hint.wav")
 
     # Tiga ekspresi Hina tambahan, tinggi tampil sama dengan yang lain.
-    $ assert renpy.render(_bust("char/hina_ketawa+tutupmata", None, 592), 1920, 1080, 0, 0).height == 600
-    $ assert renpy.render(_bust("char/hina_senyum-tutupmata", None, 592), 1920, 1080, 0, 0).height == 600
-    $ assert renpy.render(_bust("char/hina_senyum-mulut-terbuka", None, 592), 1920, 1080, 0, 0).height == 600
+    $ assert abs(renpy.render(_bust("char/hina_ketawa+tutupmata", None, 592, BUST_HINA), 1920, 1080, 0, 0).height - BUST_HINA) <= 1  # pembulatan gambar toleransi 1 px
+    $ assert abs(renpy.render(_bust("char/hina_senyum-tutupmata", None, 592, BUST_HINA), 1920, 1080, 0, 0).height - BUST_HINA) <= 1  # pembulatan gambar toleransi 1 px
+    $ assert abs(renpy.render(_bust("char/hina_senyum-mulut-terbuka", None, 592, BUST_HINA), 1920, 1080, 0, 0).height - BUST_HINA) <= 1  # pembulatan gambar toleransi 1 px
 
 
 testcase prolog_cerita:
@@ -502,4 +502,6 @@ testcase jepang_smoke:
     assert "Lanjut" timeout 10.0
     click id "penjelasan_lanjut"
     assert screen "kuis_soal" timeout 10.0
+
+
 
