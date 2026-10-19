@@ -14,6 +14,7 @@
 label prolog:
 
     $ quick_menu = True
+    $ putar_musik("bgm_hari.ogg")
 
     # -----------------------------------------------------------------------
     # RUMAH REI — PAGI

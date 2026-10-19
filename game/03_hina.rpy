@@ -15,8 +15,9 @@ label hina_hint(level, soal, gratis):
 
     $ biaya = biaya_hint(level, gratis)
     $ mandiri = max(0, mandiri - biaya)
+    $ putar_suara("hint.wav")
 
-    show char hina fokus at kanan
+    show char hina fokus at kanan with dissolve
 
     $ pesan_hint = soal["hint"][level]
     h "[pesan_hint]"
@@ -29,6 +30,8 @@ label hina_hint(level, soal, gratis):
 # ---------------------------------------------------------------------------
 
 label interlude_koridor:
+
+    $ putar_musik("bgm_hari.ogg")
 
     scene bg koridor with fade
     show char hina netral at kanan
@@ -55,6 +58,8 @@ label interlude_koridor:
 # ---------------------------------------------------------------------------
 
 label interlude_kantin:
+
+    $ putar_musik("bgm_hari.ogg")
 
     scene bg kantin with fade
     show char hina senyum at kanan
@@ -86,6 +91,8 @@ label interlude_kantin:
 # ---------------------------------------------------------------------------
 
 label interlude_malam:
+
+    $ putar_musik("bgm_hari.ogg")
 
     scene bg kelas malam with fade
     show char hina fokus at kanan

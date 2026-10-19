@@ -174,6 +174,7 @@ define SOAL_ID = [
 label chapter_indonesia:
 
     $ teks = TEKS_ID
+    $ putar_musik("bgm_kuis.ogg")
 
     scene bg kelas sore with fade
     show char hina senyum-buka at kanan

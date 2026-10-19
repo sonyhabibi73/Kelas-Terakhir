@@ -154,6 +154,7 @@ label awal_permainan:
 label pilih_mapel:
 
     $ quick_menu = True
+    $ putar_musik("bgm_menu.ogg")
 
     scene bg kelas sore with fade
     call screen pilih_mapel

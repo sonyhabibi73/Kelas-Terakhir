@@ -273,6 +273,11 @@ testcase jepang_ending_c:
     advance until screen "rapor"
     assert eval (nilai == 30)
     assert eval (huruf == "C")
+
+    # Nilai C -> lagu ending C.
+    pause 2.0
+    $ assert renpy.music.get_playing(channel="music") == "audio/bgm_akhir_c.ogg", "akhir=%r" % (renpy.music.get_playing(channel="music"),)
+
     click id "rapor_lanjut"
 
     # Ending C: latar kelas malam, Hina kecewa, lalu keluar.
@@ -303,6 +308,25 @@ testcase aset_prolog:
     $ assert renpy.render(_bust("char/hina_netral", None, 592), 1920, 1080, 0, 0).height == 600
     $ assert renpy.render(_bust("char/hina_fokus", None, 429), 1920, 1080, 0, 0).height == 600
     $ assert renpy.render(_bust("char/hina_kecewa", None, 429), 1920, 1080, 0, 0).height == 600
+
+
+testcase aset_audio:
+    # Musik & efek suara: nama berkas harus persis seperti di 07_audio.rpy.
+    $ assert renpy.loadable("audio/bgm_menu.ogg")
+    $ assert renpy.loadable("audio/bgm_hari.ogg")
+    $ assert renpy.loadable("audio/bgm_kuis.ogg")
+    $ assert renpy.loadable("audio/bgm_akhir_a.ogg")
+    $ assert renpy.loadable("audio/bgm_akhir_b.ogg")
+    $ assert renpy.loadable("audio/bgm_akhir_c.ogg")
+    $ assert renpy.loadable("audio/klik.wav")
+    $ assert renpy.loadable("audio/benar.wav")
+    $ assert renpy.loadable("audio/salah.wav")
+    $ assert renpy.loadable("audio/hint.wav")
+
+    # Tiga ekspresi Hina tambahan, tinggi tampil sama dengan yang lain.
+    $ assert renpy.render(_bust("char/hina_ketawa+tutupmata", None, 592), 1920, 1080, 0, 0).height == 600
+    $ assert renpy.render(_bust("char/hina_senyum-tutupmata", None, 592), 1920, 1080, 0, 0).height == 600
+    $ assert renpy.render(_bust("char/hina_senyum-mulut-terbuka", None, 592), 1920, 1080, 0, 0).height == 600
 
 
 testcase prolog_cerita:
@@ -356,6 +380,20 @@ testcase ui_awal_indonesia:
     assert "Bahasa Indonesia" timeout 10.0
     assert "Kembali" timeout 10.0
     assert not "日本語"
+
+
+testcase musik:
+    # Hook berhenti di layar pilih kelas tambahan (musik menu).
+    # Jeda > durasi fade musik (1,5 detik) supaya lagu lama sudah benar-benar hilang.
+    pause 2.0
+    $ assert renpy.music.get_playing(channel="music") == "audio/bgm_menu.ogg", "peta=%r" % (renpy.music.get_playing(channel="music"),)
+
+    click id "kartu_ja"
+    advance until screen "kuis_soal"
+    pause 2.0
+
+    # Chapter Jepang memutar lagu kuis, bukan lagu menu.
+    $ assert renpy.music.get_playing(channel="music") == "audio/bgm_kuis.ogg", "kuis=%r" % (renpy.music.get_playing(channel="music"),)
 
 
 testcase jepang_tanpa_kanji:

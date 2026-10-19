@@ -21,6 +21,9 @@ label penilaian:
     $ nilai = hitung_nilai(benar, total_soal, mandiri)
     $ huruf = huruf_nilai(nilai)
 
+    # Musik rapor + ending mengikuti huruf nilai (A/B/C).
+    $ putar_musik("bgm_akhir_%s.ogg" % huruf.lower())
+
     scene bg kelas sore with fade
     hide char
 

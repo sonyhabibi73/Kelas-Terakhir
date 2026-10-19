@@ -645,11 +645,13 @@ label satu_soal(daftar, i, teks):
     if jawaban_benar:
         $ benar = benar + 1
         $ pesan = teks["benar"]
-        show char hina senyum at kanan
+        $ putar_suara("benar.wav")
+        show char hina senyum-buka at kanan with dissolve
         h "[pesan]"
     else:
         $ pesan = teks["salah"]
-        show char hina kaget at kanan
+        $ putar_suara("salah.wav")
+        show char hina kaget at kanan with dissolve
         h "[pesan]"
 
     $ hasil.append({
@@ -661,5 +663,5 @@ label satu_soal(daftar, i, teks):
 
     call screen penjelasan(soal, jawaban_benar, teks)
 
-    show char hina netral at kanan
+    show char hina netral at kanan with dissolve
     return
