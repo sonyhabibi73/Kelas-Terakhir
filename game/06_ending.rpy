@@ -111,14 +111,14 @@ label ending_a:
     show char hina senyum-buka at kanan with dissolve
 
     h "Nggak. Yang milih jawaban terakhir itu kamu."
-    "（Hina menutup buku catatannya, lalu melihat ke luar jendela.)"
+    "（Hina menutup buku catatannya, lalu melihat ke luar jendela.）"
     h "Kata-kata itu bukan cuma buat dihafal. Dia dipilih."
     r "……Hari ini aku mulai ngerti."
 
     show char hina tertawa at kanan with dissolve
 
     h "Iya. Muka kamu bilang gitu."
-    "（Cahaya sore di meja terasa sedikit lebih hangat dari tadi.)"
+    "（Cahaya sore di meja terasa sedikit lebih hangat dari tadi.）"
 
     call screen akhir_mapel(teks)
 
@@ -139,14 +139,14 @@ label ending_b:
     show char hina netral at kanan
 
     h "……Yah, lulus."
-    r "Legaan?"
+    r "Lega?"
     h "Sedikit. Tapi tadi beberapa jawabanmu cuma tebakan, kan?"
     r "……Ketahuan?"
     h "Jelas."
-    "（Hina menarik bukuku dan menandai halaman yang salah.)"
+    "（Hina menarik bukuku dan menandai halaman yang salah.）"
     h "Bagian ini, lain kali alasanmu harus bisa dijelaskan."
     r "Iya, Bu."
-    h "Aku bukan Bu. ... Tapi ya udah."
+    h "Aku bukan Bu. ……Tapi ya udah."
 
     show char hina senyum-mata at kanan with dissolve
 
@@ -181,7 +181,7 @@ label ending_c:
     show char hina senyum-mata at kanan with dissolve
 
     h "Ya iyalah."
-    "（Aku tidak tahu harus menjawab apa. Tapi Hina tidak menunggu jawaban.)"
+    "（Aku tidak tahu harus menjawab apa. Tapi Hina tidak menunggu jawaban.）"
 
     call screen akhir_mapel(teks)
 

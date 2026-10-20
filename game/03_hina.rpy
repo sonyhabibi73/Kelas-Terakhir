@@ -74,7 +74,7 @@ label interlude_kantin:
 
     h "Nah. Itu bagus."
     r "Masa salah itu bagus?"
-    h "Bukan salahnya. Tapi kamu tahu alasannya. Itu bedanya sama orang yang benar karena untung."
+    h "Bukan salahnya. Tapi kamu tahu alasannya. Itu bedanya sama orang yang benar karena beruntung."
     h "Kalau kamu cuma nebak dan kebetulan benar, besok kamu bakal salah lagi."
     h "Jadi, mending salah tapi alasannya jelas, daripada benar tapi nggak tahu kenapa."
     r "Itu agak menghibur."
@@ -109,6 +109,6 @@ label interlude_malam:
     h "Petunjuk cuma satu. Setelah itu, kamu sendiri."
     r "……Oke."
     h "Jangan lihat aku terus. Lihat soalnya."
-    r "（Hina menyandarkan punggung ke kursi, memberi ruang.)"
+    "（Hina menyandarkan punggung ke kursi, memberi ruang.）"
 
     return

@@ -211,7 +211,7 @@ label chapter_jepang:
 
     sk "Sebelum mulai, baca satu kalimat. Keras-keras."
     r "……はい."
-    sk "「わたしは がくせい です」. Baca dulu. Jangan diterjemah."
+    sk "「わたしは がくせい です」. Baca dulu. Jangan diterjemahkan."
     r "Watashi wa gakusei desu."
     sk "Kenapa 'wa', bukan 'ga'?"
 
@@ -237,7 +237,7 @@ label chapter_jepang:
 
     "Kami kembali ke kelas. Kursi-kursi lain sudah kosong sejak tadi."
 
-    h "Mulai dari sini, tiap petunjuk ada harganya. Pilih dengan sadar."
+    h "Aturan tadi berlaku penuh mulai sekarang."
     r "Kalau aku salah pilih?"
 
     show char hina senyum-mata at kanan with dissolve
@@ -255,7 +255,7 @@ label chapter_jepang:
 
     call interlude_malam
 
-    r "（Aku menarik napas. Dua soal terakhir. Tidak ada lagi waktu untuk ragu.)"
+    "（Aku menarik napas. Dua soal terakhir. Tidak ada lagi waktu untuk ragu.）"
 
     call satu_soal(SOAL_JA, 6, teks)
     call satu_soal(SOAL_JA, 7, teks)

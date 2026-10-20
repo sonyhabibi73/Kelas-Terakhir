@@ -159,7 +159,7 @@ define SOAL_ID = [
         "penjelasan": "Surel resmi memerlukan sapaan hormat (Yth. Ibu ...), kata baku (menjadi, bukan jadi), kata santun seperti mohon kesediaan, serta penutup berupa ucapan terima kasih. Pilihan lain masih memakai ragam santai (mau, makasih, ya) atau terkesan menekan pembaca.",
         "hint": [
             "Surel resmi punya empat bagian: sapaan hormat, isi permohonan yang jelas, kata baku, dan penutup.",
-            "Periksa kata bakunya: jadi berubah menjadi menjadi, mau menjadi mohon, makasih menjadi terima kasih.",
+            "Periksa kata bakunya: 'jadi' seharusnya 'menjadi', 'mau' seharusnya 'mohon', 'makasih' seharusnya 'terima kasih'.",
             "Dua pilihan sudah memakai Yth. Ibu Rina. Buang yang masih memakai kata jadi atau terkesan menekan pembaca.",
         ],
     },
@@ -247,7 +247,7 @@ label chapter_indonesia:
 
     "Kami kembali ke kelas. Kursi-kursi lain sudah kosong sejak tadi."
 
-    h "Mulai dari sini, tiap petunjuk ada harganya. Pilih dengan sadar."
+    h "Aturan tadi berlaku penuh mulai sekarang."
     r "Kalau aku salah pilih?"
 
     show char hina senyum-mata at kanan with dissolve
@@ -265,7 +265,7 @@ label chapter_indonesia:
     # Beat 5 — klimaks (2 soal)
     call interlude_malam
 
-    r "（Aku menarik napas. Dua soal terakhir. Tidak ada lagi waktu untuk ragu.)"
+    "（Aku menarik napas. Dua soal terakhir. Tidak ada lagi waktu untuk ragu.）"
 
     call satu_soal(SOAL_ID, 6, teks)
     call satu_soal(SOAL_ID, 7, teks)

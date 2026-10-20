@@ -24,7 +24,7 @@ label prolog:
     show char ibu senyum at kiri
 
     "Pagi itu, rumah terasa lebih hangat dari biasanya."
-    "Aku berdiri di depan pintu, merapikan seragam baru. Hari ini hari pertamaku di sekolah baru."
+    "Aku berdiri di depan pintu, merapikan seragam baru. Hari ini hari pertamaku di sekolah ini."
     "Aku sudah memeriksa tas tiga kali: buku, dompet, dan botol minum. Semuanya ada."
 
     ibu "[nama_mc], kelas tambahannya mulai hari ini, ya?"
@@ -42,7 +42,7 @@ label prolog:
     ibu "Hati-hati di jalan."
 
     "Ibu melambaikan tangan sampai aku menghilang di tikungan."
-    "Dua minggu. Setelah itu guru-guru pertukaran itu pulang, dan kelas tambahan ini selesai."
+    "Dua minggu. Setelah itu para guru pertukaran pulang, dan kelas tambahan ini selesai."
     "Aku menarik napas panjang. Sekolah baru, wajah-wajah baru. Semoga semuanya berjalan lancar."
 
 
@@ -103,9 +103,9 @@ label prolog:
     h "Oh iya, hari ini ada kelas tambahan. Kamu mau ikut yang mana?"
     r "Kelas tambahan?"
     h "Iya. Ada kelas bahasa Jepang dan kelas bahasa Indonesia. Dua-duanya lumayan menantang."
-    h "Program pertukarannya selesai dua minggu lagi. Yang nilainya bagus bisa lanjut ke kelas tingkat lanjut."
+    h "Program pertukarannya selesai dua minggu lagi. Yang nilainya bagus bisa ikut kelas tingkat lanjut."
     r "Kamu ikut?"
-    h "Ikut. Aku juga butuh lanjut."
+    h "Ikut. Aku juga perlu lanjut."
     r "Aku belum tahu harus pilih yang mana."
     h "Ya pilih yang kamu mau. Aku ikut kamu."
 
