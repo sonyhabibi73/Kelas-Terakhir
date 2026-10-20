@@ -197,6 +197,9 @@ init python:
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
 
+    ## Folder sumber paket GUI tidak dipakai saat bermain; jangan ikut distribusi.
+    build.classify('VisualNovelDialogueGUI_PNG/**', None)
+
     ## Untuk mengarsipkan file, mengklasifikasikannya sebagai 'archive'.
 
     # build.classify('game/**.png', 'archive')

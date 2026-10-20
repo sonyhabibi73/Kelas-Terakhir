@@ -179,7 +179,7 @@ label chapter_indonesia:
     show char hina senyum-buka at kanan
 
     "Kelas sore. Cahaya dari jendela bergerak pelan di atas meja."
-    "Kelas elektif bahasa Indonesia. Cuma lima orang, dan tidak ada native speaker."
+    "Kelas elektif bahasa Indonesia. Cuma lima orang."
     "Bu Rina Hartati, guru pertukaran dari Jakarta, katanya menilai kami dengan standar yang sama seperti di sekolahnya."
     "Jujur, aku tidak terlalu bersemangat."
 
