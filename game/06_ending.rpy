@@ -120,6 +120,16 @@ label ending_a:
     h "Iya. Muka kamu bilang gitu."
     "（Cahaya sore di meja terasa sedikit lebih hangat dari tadi.）"
 
+    show char hina senyum-mata at kanan with dissolve
+
+    h "Ayo, pulang."
+    r "Rumah kamu ke arah sebaliknya."
+    h "Mau mampir dulu."
+    r "Mampir di mana?"
+    h "Pokoknya ikut."
+    "（Dia jalan duluan. Langkahnya pelan—jauh lebih pelan dari biasanya.）"
+    "（Di ujung koridor, dia menoleh sebentar. Memastikan aku masih di belakang.）"
+
     call screen akhir_mapel(teks)
 
     if _return == "ulang":
@@ -151,6 +161,15 @@ label ending_b:
     show char hina senyum-mata at kanan with dissolve
 
     h "Sisanya, aku yang bantu selesaikan. Kamu nggak harus nanggung sendiri."
+    r "Kenapa repot-repot?"
+    h "……Karena kamu nanya."
+    "（Dia mengetuk meja dua kali, lalu berdiri. Tasnya sudah di pundak, tapi dia belum pergi.）"
+    h "Besok, jam empat. Di sini."
+    r "Kalau aku telat?"
+    h "Aku tunggu sepuluh menit."
+    r "Terus?"
+    h "Terus aku mulai tanpa kamu. Kamu nyusul sendiri."
+    "（Aku belum bisa memastikan apakah itu ancaman.）"
 
     call screen akhir_mapel(teks)
 
@@ -181,6 +200,12 @@ label ending_c:
     show char hina senyum-mata at kanan with dissolve
 
     h "Ya iyalah."
+    r "Bahkan setelah aku gagal?"
+    h "Gagal apa? Baru satu malam."
+    "（Dia mengangkat tasnya, lalu berhenti di pintu kelas.）"
+    h "Aku tunggu di gerbang. Lima menit."
+    r "Kalau aku lama?"
+    h "Ya aku tunggu lebih lama. Jangan bikin aku ngomong dua kali."
     "（Aku tidak tahu harus menjawab apa. Tapi Hina tidak menunggu jawaban.）"
 
     call screen akhir_mapel(teks)
