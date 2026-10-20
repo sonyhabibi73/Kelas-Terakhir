@@ -24,7 +24,7 @@ label penilaian:
     # Musik rapor + ending mengikuti huruf nilai (A/B/C).
     $ putar_musik("bgm_akhir_%s.ogg" % huruf.lower())
 
-    scene bg kelas sore with fade
+    scene bg kelas malam with fade
     hide char
 
     if mapel_aktif == "ja":
@@ -98,7 +98,7 @@ label ending_a:
 
     $ persistent.akhir_a = True
 
-    scene bg kelas sore with fade
+    scene bg kelas malam with fade
     show char hina senyum at kanan
 
     "Udara kelas mereda. Suara detak jam dinding terasa lebih pelan."
@@ -118,7 +118,7 @@ label ending_a:
     show char hina tertawa at kanan with dissolve
 
     h "Iya. Muka kamu bilang gitu."
-    "（Cahaya sore di meja terasa sedikit lebih hangat dari tadi.）"
+    "（Lampu kelas terasa sedikit lebih hangat dari tadi.）"
 
     show char hina senyum-mata at kanan with dissolve
 
@@ -145,7 +145,7 @@ label ending_b:
 
     $ persistent.akhir_b = True
 
-    scene bg kelas sore with fade
+    scene bg kelas malam with fade
     show char hina netral at kanan
 
     h "……Yah, lulus."
