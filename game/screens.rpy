@@ -675,42 +675,34 @@ screen file_slots(title):
                         key "save_delete" action FileDelete(slot)
 
             ## Tombol untuk mengakses halaman lain.
-            vbox:
+            hbox:
                 style_prefix "page"
 
                 xalign 0.5
                 yalign 1.0
 
-                hbox:
-                    xalign 0.5
+                spacing 8
 
-                    spacing gui.page_spacing
+                textbutton "<":
+                    id "halaman_sebelum"
+                    action FilePagePrevious()
 
-                    textbutton _("<") action FilePagePrevious()
-                    key "save_page_prev" action FilePagePrevious()
+                if config.has_autosave:
+                    textbutton _("{#auto_page}Otomatis") action FilePage("auto")
 
-                    if config.has_autosave:
-                        textbutton _("{#auto_page}O") action FilePage("auto")
+                if config.has_quicksave:
+                    textbutton _("{#quick_page}Cepat") action FilePage("quick")
 
-                    if config.has_quicksave:
-                        textbutton _("{#quick_page}C") action FilePage("quick")
+                ## antara(1,10) beri nomor antara 1 sampai 9.
+                for page in range(1, 10):
+                    textbutton "[page]" action FilePage(page)
 
-                    ## antara(1,10) beri nomor antara 1 sampai 9.
-                    for page in range(1, 10):
-                        textbutton "[page]" action FilePage(page)
+                textbutton ">":
+                    id "halaman_sesudah"
+                    action FilePageNext()
 
-                    textbutton _(">") action FilePageNext()
-                    key "save_page_next" action FilePageNext()
-
-                if config.has_sync:
-                    if CurrentScreenName() == "save":
-                        textbutton _("Sinkronisasi Unggah"):
-                            action UploadSync()
-                            xalign 0.5
-                    else:
-                        textbutton _("Unduh Sinkronisasi"):
-                            action DownloadSync()
-                            xalign 0.5
+            key "save_page_prev" action FilePagePrevious()
+            key "save_page_next" action FilePageNext()
 
 
 style page_label is gui_label

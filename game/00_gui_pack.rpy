@@ -58,6 +58,12 @@ init python:
     PK_PILL_HOVER = pk_pill("pill_hover")
     PK_PILL_MATI = pk_pill("pill_disabled")
     PK_PILL_UTAMA = pk_pill("pill_utama")
+
+    ## Tombol bulat untuk baris halaman (dibuat oleh tools/generate_page_buttons.py).
+    ## Border 32 = setengah tinggi gambar, jadi lingkarannya tidak melar.
+    PK_BULAT = pk_pill("bulat_idle", 32)
+    PK_BULAT_HOVER = pk_pill("bulat_hover", 32)
+    PK_BULAT_AKTIF = pk_pill("bulat_aktif", 32)
     PK_PILL_UTAMA_HOVER = pk_pill("pill_utama_hover")
     PK_PILL_PUTIH = pk_pill("pill_putih")
     PK_BADGE = pk_pill("badge_yellow", 60)
@@ -181,10 +187,27 @@ style slot_button_text:
     selected_idle_color PK_ACCENT
     selected_hover_color PK_ACCENT
 
+## Tombol halaman (baris di bawah daftar slot): pill kecil, bukan pill besar,
+## supaya sembilan nomor halaman + dua panah tetap muat dalam satu baris.
 style page_button:
-    background PK_PILL
-    hover_background PK_PILL_HOVER
-    padding (44, 18)
+    background PK_BULAT
+    hover_background PK_BULAT_HOVER
+    selected_background PK_BULAT_AKTIF
+    insensitive_background None
+    padding (14, 8)
+    xminimum 64
+    yminimum 64
+
+style page_button_text:
+    size 24
+    idle_color PK_MUTED
+    hover_color PK_ACCENT
+    selected_color "#ffffff"
+    selected_hover_color "#ffffff"
+    insensitive_color PK_MATI
+    textalign 0.5
+    xalign 0.5
+    yalign 0.5
 
 style help_button:
     padding (48, 22)
