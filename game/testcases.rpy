@@ -159,6 +159,11 @@ testcase indonesia_lengkap:
 
     # Ending A, lalu kembali ke pemilihan mapel.
     advance until screen "akhir_mapel"
+
+    # Ending A tercatat untuk galeri di menu utama.
+    assert eval (JUDUL_AKHIR[huruf] == "Yang Memilih")
+    assert eval (persistent.akhir_a)
+
     click id "akhir_ulang"
     assert screen "pilih_mapel" timeout 10.0
 

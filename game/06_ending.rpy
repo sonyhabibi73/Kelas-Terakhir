@@ -96,6 +96,8 @@ label penilaian:
 
 label ending_a:
 
+    $ persistent.akhir_a = True
+
     scene bg kelas sore with fade
     show char hina senyum at kanan
 
@@ -131,6 +133,8 @@ label ending_a:
 
 label ending_b:
 
+    $ persistent.akhir_b = True
+
     scene bg kelas sore with fade
     show char hina netral at kanan
 
@@ -160,6 +164,8 @@ label ending_b:
 # ---------------------------------------------------------------------------
 
 label ending_c:
+
+    $ persistent.akhir_c = True
 
     scene bg kelas malam with fade
     show char hina kecewa at kanan

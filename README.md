@@ -47,7 +47,11 @@ di tepi layar.
 - Nilai akhir = 70% jawaban benar + 30% kemandirian.
   Kalau semua soal benar tetapi kemandirian di bawah 55, nilai ditahan di
   84 supaya paling tinggi hanya B.
-- A ≥ 85, B 65–84, C < 65, masing-masing dengan ending sendiri.
+- A ≥ 85, B 65–84, C < 65. Tiap huruf punya ending bernama sendiri
+  (Yang Memilih / Yang Dibantu / Yang Mengulang), dan kartu akhir
+  menampilkan nilai serta predikat.
+- Galeri kecil di pojok kanan bawah menu utama mencatat ending yang sudah
+  dicapai (misalnya 2/3).
 - Setelah ending: ulangi permainan atau keluar.
 
 ## Struktur folder

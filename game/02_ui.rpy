@@ -35,6 +35,15 @@ screen main_menu():
         text "Satu kelas. Dua bahasa. Satu kesempatan terakhir." size 26 color "#c3ccd4"
 
     vbox:
+        xalign 1.0
+        yalign 1.0
+        xoffset -80
+        yoffset -64
+        spacing 5
+
+        use penanda_akhir
+
+    vbox:
         xpos 150
         ypos 500
         spacing 10
@@ -499,7 +508,7 @@ screen rapor(teks):
     modal True
 
     $ review = daftar_review(hasil)
-    $ warna_huruf = "#2f8f4e" if huruf == "A" else ("#b8860b" if huruf == "B" else "#b0413e")
+    $ warna_huruf = WARNA_HURUF[huruf]
 
     add Solid("#0a1016e6")
 
@@ -584,8 +593,12 @@ screen akhir_mapel(teks):
             spacing 14
 
             text "END" size 20 color PK_ACCENT kerning 8
-            text teks["tamat"] size 42 color PK_INK
-            text teks["tamat_sub"] size 22 color PK_MUTED
+            text JUDUL_AKHIR[huruf] size 42 color PK_INK
+            text PENUTUP_AKHIR[huruf] size 22 color PK_MUTED xmaximum 790
+            text "Nilai %d  •  Predikat %s" % (nilai, huruf):
+                size 23
+                color WARNA_HURUF[huruf]
+            text teks["tamat_sub"] size 20 color PK_MUTED
 
             null height 12
 
@@ -611,6 +624,26 @@ screen akhir_mapel(teks):
                     text_size 24
                     text_color PK_INK
                     text_hover_color PK_ACCENT
+
+
+# ---------------------------------------------------------------------------
+# PENANDA ENDING DI MENU UTAMA
+# ---------------------------------------------------------------------------
+
+screen penanda_akhir():
+
+    $ terbuka = [h for h in ("A", "B", "C") if getattr(persistent, "akhir_" + h.lower())]
+
+    text "Akhir ditemukan  %d/3" % len(terbuka):
+        size 18
+        color "#c3ccd4"
+        xalign 1.0
+
+    for h in ("A", "B", "C"):
+        text "%s  •  %s" % (h, JUDUL_AKHIR[h] if h in terbuka else "?"):
+            size 18
+            color (PK_ACCENT_TERANG if h in terbuka else PK_MUTED)
+            xalign 1.0
 
 
 # ---------------------------------------------------------------------------

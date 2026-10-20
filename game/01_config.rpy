@@ -53,6 +53,35 @@ default hint_dipakai   = False
 default hint_terakhir  = ""
 default jawaban_benar  = False
 
+# Ending yang pernah dicapai, untuk galeri kecil di menu utama.
+default persistent.akhir_a = False
+default persistent.akhir_b = False
+default persistent.akhir_c = False
+
+
+# ---------------------------------------------------------------------------
+# IDENTITAS ENDING
+# ---------------------------------------------------------------------------
+#  Dipakai layar rapor, layar penutup, dan galeri di menu utama.
+
+define WARNA_HURUF = {
+    "A": "#2f8f4e",
+    "B": "#b8860b",
+    "C": "#b0413e",
+}
+
+define JUDUL_AKHIR = {
+    "A": "Yang Memilih",
+    "B": "Yang Dibantu",
+    "C": "Yang Mengulang",
+}
+
+define PENUTUP_AKHIR = {
+    "A": "Kamu memilih kata-katanya sendiri, dan kamu bisa menjelaskan alasannya.",
+    "B": "Sebagian sudah kamu pahami. Sisanya kamu selesaikan bersama.",
+    "C": "Hari ini belum selesai. Besok kamu mulai lagi, satu per satu.",
+}
+
 
 # ---------------------------------------------------------------------------
 # FUNGSI & RUMUS

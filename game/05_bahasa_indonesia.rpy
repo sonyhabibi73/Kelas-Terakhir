@@ -35,7 +35,6 @@ define TEKS_ID = {
     "review_none":        "Tidak ada materi yang perlu diulang.",
     "ulang":              "Coba mapel lain",
     "keluar":             "Keluar",
-    "tamat":              "Selesai",
     "tamat_sub":          "Sampai jumpa di mapel lain.",
 }
 
