@@ -24,11 +24,30 @@ default nama_hina    = "Hina"
 default nama_guru_jp = "Sakuraba-sensei"
 default nama_guru_id = "Bu Rina"
 
-define r    = Character("[nama_mc]",      window_background=pk_kotak("rei"),      namebox_background=pk_tab("rei"))
-define h    = Character("[nama_hina]",    window_background=pk_kotak("hina"),     namebox_background=pk_tab("hina"))
-define ibu  = Character("Ibu",            window_background=pk_kotak("ibu"),      namebox_background=pk_tab("ibu"))
-define sk   = Character("[nama_guru_jp]", window_background=pk_kotak("sakuraba"), namebox_background=pk_tab("sakuraba"))
-define rina = Character("[nama_guru_id]", window_background=pk_kotak("rina"),     namebox_background=pk_tab("rina"))
+# Blip: bunyi pendek tiap baris dialog. Kanal "blip" memakai mixer "sfx",
+# jadi ikut slider efek suara di Pengaturan.
+init python:
+
+    def _blip_suara(nama, volume=0.4):
+        """Bikin callback Character yang memutar audio/blip_<nama>.wav."""
+
+        jalur = "audio/blip_%s.wav" % nama
+
+        def callback(event, **kwargs):
+            if event == "show_done" and not renpy.config.skipping:
+                if renpy.loadable(jalur):
+                    renpy.sound.play(jalur, channel="blip", relative_volume=volume)
+
+        return callback
+
+    renpy.music.register_channel("blip", mixer="sfx", loop=False)
+
+
+define r    = Character("[nama_mc]",      window_background=pk_kotak("rei"),      namebox_background=pk_tab("rei"),      callback=_blip_suara("rei"))
+define h    = Character("[nama_hina]",    window_background=pk_kotak("hina"),     namebox_background=pk_tab("hina"),     callback=_blip_suara("hina"))
+define ibu  = Character("Ibu",            window_background=pk_kotak("ibu"),      namebox_background=pk_tab("ibu"),      callback=_blip_suara("ibu"))
+define sk   = Character("[nama_guru_jp]", window_background=pk_kotak("sakuraba"), namebox_background=pk_tab("sakuraba"), callback=_blip_suara("guru"))
+define rina = Character("[nama_guru_id]", window_background=pk_kotak("rina"),     namebox_background=pk_tab("rina"),     callback=_blip_suara("guru"))
 
 
 # ---------------------------------------------------------------------------

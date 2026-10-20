@@ -35,6 +35,9 @@ naik untuk petunjuk.
   benar.wav  jawaban benar
   salah.wav  jawaban salah
   hint.wav   saat petunjuk dipakai
+  blip_rei.wav / blip_hina.wav / blip_guru.wav / blip_ibu.wav
+             bunyi pendek tiap baris dialog, nada beda per karakter
+             (dibuat dengan tools/generate_blips.py)
 
 Catatan
 -------

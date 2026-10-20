@@ -335,11 +335,24 @@ testcase aset_audio:
     $ assert renpy.loadable("audio/benar.wav")
     $ assert renpy.loadable("audio/salah.wav")
     $ assert renpy.loadable("audio/hint.wav")
+    $ assert renpy.loadable("audio/blip_rei.wav")
+    $ assert renpy.loadable("audio/blip_hina.wav")
+    $ assert renpy.loadable("audio/blip_guru.wav")
+    $ assert renpy.loadable("audio/blip_ibu.wav")
 
     # Tiga ekspresi Hina tambahan, tinggi tampil sama dengan yang lain.
     $ assert abs(renpy.render(_bust("char/hina_ketawa+tutupmata", None, 592, BUST_HINA), 1920, 1080, 0, 0).height - BUST_HINA) <= 1  # pembulatan gambar toleransi 1 px
     $ assert abs(renpy.render(_bust("char/hina_senyum-tutupmata", None, 592, BUST_HINA), 1920, 1080, 0, 0).height - BUST_HINA) <= 1  # pembulatan gambar toleransi 1 px
     $ assert abs(renpy.render(_bust("char/hina_senyum-mulut-terbuka", None, 592, BUST_HINA), 1920, 1080, 0, 0).height - BUST_HINA) <= 1  # pembulatan gambar toleransi 1 px
+
+
+testcase blip_suara:
+    # Kanal "blip" terdaftar dan helper bisa memutar berkasnya tanpa error.
+    $ _blip_suara("hina")("show_done")
+    $ _blip_suara("guru")("show_done")
+    $ _blip_suara("rei")("show_done")
+    $ _blip_suara("ibu")("show_done")
+    pause 0.1
 
 
 testcase prolog_cerita:
