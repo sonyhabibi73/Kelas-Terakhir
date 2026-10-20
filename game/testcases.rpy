@@ -556,3 +556,25 @@ testcase saveload_kuis:
     assert screen "kuis_soal" timeout 10.0
 
     $ renpy.unlink_save("uji_saveload")
+
+
+testcase kantin_benar:
+    $ benar = 6
+    $ mandiri = 100
+
+    run Jump("interlude_kantin")
+    advance until "Enam dari enam"
+    assert "Enam dari enam." timeout 10.0
+    run MainMenu(confirm=False)
+    assert screen "main_menu" timeout 10.0
+
+
+testcase kantin_salah:
+    $ benar = 4
+    $ mandiri = 70
+
+    run Jump("interlude_kantin")
+    advance until "Tadi pas salah"
+    assert "Tadi pas salah" timeout 10.0
+    run MainMenu(confirm=False)
+    assert screen "main_menu" timeout 10.0

@@ -65,20 +65,36 @@ label interlude_kantin:
     show char hina senyum at kanan
 
     "Kantin hampir kosong. Wangi kayu meja bercampur bau makanan yang sudah dingin."
-    h "Tadi pas salah, kamu kesel?"
-    r "Sedikit."
-    h "Cuma sedikit?"
-    r "Ya. Karena aku tahu kenapa aku salah."
 
-    show char hina tertawa at kanan with dissolve
+    if benar == 6:
 
-    h "Nah. Itu bagus."
-    r "Masa salah itu bagus?"
-    h "Bukan salahnya. Tapi kamu tahu alasannya. Itu bedanya sama orang yang benar karena beruntung."
-    h "Kalau kamu cuma nebak dan kebetulan benar, besok kamu bakal salah lagi."
-    h "Jadi, mending salah tapi alasannya jelas, daripada benar tapi nggak tahu kenapa."
-    r "Itu agak menghibur."
-    r "Kamu kenapa begitu soal 'harus bisa dijelasin'?"
+        h "Enam dari enam."
+        r "Kamu ngitung dari tadi?"
+        h "Nggak. Kelihatan."
+        h "Aku cuma penasaran. Kamu yakin karena ngerti, atau karena soalnya kebetulan cocok?"
+        r "……Ada bedanya?"
+        h "Ada. Besok soalnya bisa diubah sedikit."
+        r "Harusnya aku masih bisa."
+        h "Harusnya. Itu kata yang bikin aku nanya."
+        r "Kamu kenapa begitu soal 'harus bisa dijelasin'?"
+
+    else:
+
+        h "Tadi pas salah, kamu kesel?"
+        r "Sedikit."
+        h "Cuma sedikit?"
+        r "Ya. Karena aku tahu kenapa aku salah."
+
+        show char hina tertawa at kanan with dissolve
+
+        h "Nah. Itu bagus."
+        r "Masa salah itu bagus?"
+        h "Bukan salahnya. Tapi kamu tahu alasannya. Itu bedanya sama orang yang benar karena beruntung."
+        h "Kalau kamu cuma nebak dan kebetulan benar, besok kamu bakal salah lagi."
+        h "Jadi, mending salah tapi alasannya jelas, daripada benar tapi nggak tahu kenapa."
+        r "Itu agak menghibur."
+        r "Kamu kenapa begitu soal 'harus bisa dijelasin'?"
+
     h "……Karena aku pernah lolos satu tahap cuma karena nebak."
     h "Waktu ditanya alasannya, aku nggak bisa ngomong apa-apa. Gurunya diam, aku juga."
     h "Nilainya naik. Tapi aku tahu aku nggak ngerti apa-apa."
@@ -88,6 +104,9 @@ label interlude_kantin:
     show char hina fokus at kanan with dissolve
 
     h "Dua soal terakhir berat. Tapi kamu udah punya bekal. Jangan buru-buru."
+    r "Balik ke kelas sekarang?"
+    h "Kelas tambahannya belum selesai. Ayo."
+    "（Hina berdiri, membawa tasnya. Aku merapikan tas, lalu menyusul.）"
 
     return
 
@@ -103,6 +122,7 @@ label interlude_malam:
     scene bg kelas malam with fade
     show char hina fokus at kanan
 
+    "Kami kembali ke kelas. Koridor yang kami lewati sudah sepi."
     "Di luar sudah gelap. Lampu kelas terasa lebih putih dari tadi."
     h "Dua soal terakhir. Ini bagian yang paling nggak bisa ditawar."
     r "Aku tahu."
