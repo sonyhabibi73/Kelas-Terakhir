@@ -2,19 +2,21 @@
 # 00_images.rpy  —  SEMUA ASET VISUAL
 # ===========================================================================
 #
-#  Sebagian gambar masih PLACEHOLDER (blok warna + label). bg rumah dan
-#  char ibu senyum sudah memakai aset asli. Nama image-nya sudah final, jadi
-#  file cerita tidak perlu disentuh saat aset lain masuk.
+#  Semua background dan sprite utama sudah memakai aset asli. Nama image-nya
+#  sudah final, jadi file cerita tidak perlu disentuh saat ada gambar baru.
 #
 #  CARA MENGGANTI (pilih salah satu):
 #
 #   1) Otomatis — taruh file dengan nama yang sama di folder images/:
 #
-#        images/bg/rumah.png
-#        images/bg/kelas_sore.png
+#        images/bg/rumah.jpg
+#        images/bg/bg-kelas_sore.png
+#        images/bg/bg-kelas_malam.jpeg
 #        images/bg/koridor.png
-#        images/bg/kantin.png
-#        images/bg/kelas_malam.png
+#        images/bg/koridor-pagi.png
+#        images/bg/koridor-malam.png
+#        images/bg/gerbang-malam.png
+#        images/bg/bg-kantin_sore.jpeg
 #        images/char/hina_netral.png
 #        images/char/hina_senyum.png
 #        images/char/hina_fokus.png
@@ -36,12 +38,15 @@
 #
 #  DAFTAR ASET FINAL
 #  -----------------
-#  Background (1920x1080):
+#  Background (1920x1080; kantin 1024x572, ikut diskalakan):
 #    bg rumah        : rumah Rei, ruang makan dan pintu masuk, pagi
-#    bg kelas sore   : kelas SMA Jepang sore, meja berderet, jendela kanan
-#    bg koridor      : koridor sekolah, locker, lampu neon
-#    bg kantin       : kantin sekolah, meja kayu panjang
-#    bg kelas malam  : kelas yang sama saat malam, lampu neon
+#    bg kelas sore   : kelas sore, jendela kiri, papan tulis kanan
+#    bg kelas malam  : kelas yang sama, lampu menyala, netral-hangat
+#    bg koridor      : koridor sore (interlude)
+#    bg koridor pagi : koridor pagi (prolog)
+#    bg koridor malam: koridor malam (ending A)
+#    bg gerbang malam: gerbang sekolah malam (ending C)
+#    bg kantin sore  : kantin sore, meja panjang, kosong
 #
 #  Sprite (PNG transparan, tinggi ±980 px):
 #    char hina netral / senyum / fokus / kaget / kecewa
@@ -132,15 +137,30 @@ image bg kelas sore = _aset(
     _ph_bg("#5b6a7a", "KELAS — SORE", "SMA Jepang, meja berderet, jendela sore"),
 )
 
-# Belum ada aset koridor/kantin khusus; pakai placeholder.
+# Koridor sore (interlude) dan koridor pagi (prolog) memakai gambar berbeda.
 image bg koridor = _aset(
     "bg/koridor",
-    _ph_bg("#5c6570", "KORIDOR", "koridor sekolah, locker, lampu neon"),
+    _ph_bg("#5c6570", "KORIDOR — SORE", "koridor sekolah, locker, cahaya sore"),
 )
 
-image bg kantin = _aset(
-    "bg/kantin",
-    _ph_bg("#7a6a55", "KANTIN", "kantin sekolah, meja kayu panjang"),
+image bg koridor pagi = _aset(
+    "bg/koridor-pagi",
+    _ph_bg("#9aa7b4", "KORIDOR — PAGI", "koridor sekolah, locker, cahaya pagi"),
+)
+
+image bg koridor malam = _aset(
+    "bg/koridor-malam",
+    _ph_bg("#1e2740", "KORIDOR — MALAM", "koridor sekolah, locker, lampu mati"),
+)
+
+image bg gerbang malam = _aset(
+    "bg/gerbang-malam",
+    _ph_bg("#1b2238", "GERBANG — MALAM", "gerbang sekolah, malam, lampu jalan"),
+)
+
+image bg kantin sore = _aset(
+    "bg/bg-kantin_sore",
+    _ph_bg("#7a6a55", "KANTIN — SORE", "kantin sekolah, meja kayu panjang, sore"),
 )
 
 # File asli: images/bg/bg-kelas_malam.png (dengan dash). Kita map manual.

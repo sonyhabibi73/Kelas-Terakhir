@@ -61,7 +61,7 @@ label interlude_kantin:
 
     $ putar_musik("bgm_hari.ogg")
 
-    scene bg kantin with fade
+    scene bg kantin sore with fade
     show char hina senyum at kanan
 
     "Kantin hampir kosong. Wangi kayu meja bercampur bau makanan yang sudah dingin."

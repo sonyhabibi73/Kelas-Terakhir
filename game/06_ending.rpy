@@ -128,6 +128,10 @@ label ending_a:
     r "Mampir di mana?"
     h "Pokoknya ikut."
     "（Dia jalan duluan. Langkahnya pelan—jauh lebih pelan dari biasanya.）"
+
+    scene bg koridor malam with fade
+    show char hina senyum-mata at kanan
+
     "（Di ujung koridor, dia menoleh sebentar. Memastikan aku masih di belakang.）"
 
     call screen akhir_mapel(teks)
@@ -189,7 +193,7 @@ label ending_c:
     scene bg kelas malam with fade
     show char hina kecewa at kanan
 
-    "Lampu kelas terasa lebih putih dari biasanya."
+    "Lampu kelas terasa lebih terang dari biasanya."
     h "……[nama_mc]. Nggak apa-apa."
     r "Ini jelas nggak apa-apa."
     h "Iya. Tapi ini belum akhir."
@@ -207,6 +211,11 @@ label ending_c:
     r "Kalau aku lama?"
     h "Ya aku tunggu lebih lama. Jangan bikin aku ngomong dua kali."
     "（Aku tidak tahu harus menjawab apa. Tapi Hina tidak menunggu jawaban.）"
+
+    scene bg gerbang malam with fade
+    show char hina senyum-mata at kanan
+
+    "（Lima menit kemudian, aku sampai di gerbang. Hina masih di sana—menunggu, seperti janjinya.）"
 
     call screen akhir_mapel(teks)
 

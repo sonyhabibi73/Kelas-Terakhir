@@ -50,7 +50,7 @@ label prolog:
     # KORIDOR SEKOLAH — NABRAK HINA
     # -----------------------------------------------------------------------
 
-    scene bg koridor with fade
+    scene bg koridor pagi with fade
 
     "Sekolah baruku lebih besar dari bayanganku. Koridornya panjang, lokernya biru, dan baunya masih seperti cat baru."
     "Aku mempercepat langkah. Kata orang, bel masuk di sekolah ini sangat tepat waktu."
