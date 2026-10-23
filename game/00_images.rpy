@@ -10,10 +10,13 @@
 #   1) Otomatis — taruh file dengan nama yang sama di folder images/:
 #
 #        images/bg/rumah.jpg
+#        images/bg/bg-kelas_pagi.png
 #        images/bg/bg-kelas_sore.png
 #        images/bg/bg-kelas_malam.jpeg
-#        images/bg/koridor.png
-#        images/bg/koridor-pagi.png
+#        images/bg/bg-kelas_jadwal.png
+#        images/bg/bg-kelas_ramai.jpeg
+#        images/bg/bg-koridor-pagi.png
+#        images/bg/bg-koridor-sore.png
 #        images/bg/koridor-malam.png
 #        images/bg/gerbang-malam.png
 #        images/bg/bg-kantin_sore.jpeg
@@ -38,10 +41,13 @@
 #
 #  DAFTAR ASET FINAL
 #  -----------------
-#  Background (1920x1080; kantin 1024x572, ikut diskalakan):
+#  Background (semua 1920x1080):
 #    bg rumah        : rumah Rei, ruang makan dan pintu masuk, pagi
+#    bg kelas pagi   : kelas pagi (kedatangan pertama)
 #    bg kelas sore   : kelas sore, jendela kiri, papan tulis kanan
 #    bg kelas malam  : kelas yang sama, lampu menyala, netral-hangat
+#    bg kelas jadwal : papan jadwal pelajaran (beat montase)
+#    bg kelas ramai  : kelas dengan teman sekelas + Hina (beat montase)
 #    bg koridor      : koridor sore (interlude)
 #    bg koridor pagi : koridor pagi (prolog)
 #    bg koridor malam: koridor malam (ending A)
@@ -121,13 +127,18 @@ init -1 python:
 
 
 # ---------------------------------------------------------------------------
-# BACKGROUND (5)
+# BACKGROUND (11)
 # ---------------------------------------------------------------------------
 
 # File asli: images/bg/bg-kelas_sore.png (dengan dash). Kita map manual.
 image bg rumah = _aset(
     "bg/rumah",
     _ph_bg("#6b5a45", "RUMAH — PAGI", "rumah Rei, ruang makan dan pintu masuk"),
+)
+
+image bg kelas pagi = _aset(
+    "bg/bg-kelas_pagi",
+    _ph_bg("#9fb0bd", "KELAS — PAGI", "kelas pagi, meja berderet, cahaya pagi"),
 )
 
 # File asli: bg-kelas_sore.png di folder images/bg/
@@ -137,14 +148,25 @@ image bg kelas sore = _aset(
     _ph_bg("#5b6a7a", "KELAS — SORE", "SMA Jepang, meja berderet, jendela sore"),
 )
 
+# Dua gambar khusus montase hari pertama di prolog.
+image bg kelas jadwal = _aset(
+    "bg/bg-kelas_jadwal",
+    _ph_bg("#8a7d68", "KELAS — JADWAL", "papan jadwal pelajaran di dinding kelas"),
+)
+
+image bg kelas ramai = _aset(
+    "bg/bg-kelas_ramai",
+    _ph_bg("#7d8792", "KELAS — RAMAI", "kelas dengan teman sekelas dan Hina tertawa"),
+)
+
 # Koridor sore (interlude) dan koridor pagi (prolog) memakai gambar berbeda.
 image bg koridor = _aset(
-    "bg/koridor",
+    "bg/bg-koridor-sore",
     _ph_bg("#5c6570", "KORIDOR — SORE", "koridor sekolah, locker, cahaya sore"),
 )
 
 image bg koridor pagi = _aset(
-    "bg/koridor-pagi",
+    "bg/bg-koridor-pagi",
     _ph_bg("#9aa7b4", "KORIDOR — PAGI", "koridor sekolah, locker, cahaya pagi"),
 )
 
@@ -163,7 +185,7 @@ image bg kantin sore = _aset(
     _ph_bg("#7a6a55", "KANTIN — SORE", "kantin sekolah, meja kayu panjang, sore"),
 )
 
-# File asli: images/bg/bg-kelas_malam.png (dengan dash). Kita map manual.
+# File asli: images/bg/bg-kelas_malam.jpeg (dengan dash). Kita map manual.
 image bg kelas malam = _aset(
     "bg/bg-kelas_malam",
     _ph_bg("#2b3442", "KELAS — MALAM", "kelas yang sama, malam, lampu neon"),

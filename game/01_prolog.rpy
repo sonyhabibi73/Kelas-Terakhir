@@ -81,7 +81,7 @@ label prolog:
     # KELAS 11 IPA 2
     # -----------------------------------------------------------------------
 
-    scene bg kelas sore with fade
+    scene bg kelas pagi with fade
     show char hina senyum-buka at kanan
 
     "Kami sampai di kelas tepat saat bel berbunyi."
@@ -94,9 +94,23 @@ label prolog:
     h "Sama-sama. Nanti kalau ada yang bingung, tanya aku saja."
 
     "Hari pertama berjalan lebih cepat dari yang aku bayangkan."
-    "Hina banyak membantuku: menunjukkan loker, menjelaskan jadwal, dan memperkenalkanku ke beberapa teman sekelas."
 
-    show char hina netral at kanan with dissolve
+    # Montase hari pertama: satu background per kalimat, teks sengaja pelan.
+    scene bg koridor pagi with fade
+    show char hina senyum at kiri
+
+    "{cps=10}Hina menunjukkan loker. Sekarang tas dan sepatuku punya tempat."
+
+    scene bg kelas jadwal with fade
+
+    "{cps=10}Hina menjelaskan jadwal. Aku mencatatnya ulang, takut ada yang terlewat."
+
+    scene bg kelas ramai with fade
+
+    "{cps=10}Hina memperkenalkanku ke beberapa teman sekelas. Mereka tertawa, dan aku lupa harus bilang apa."
+
+    scene bg kelas sore with fade
+    show char hina netral at kanan
 
     "Saat pelajaran terakhir selesai, Hina menoleh ke arahku."
 

@@ -302,10 +302,13 @@ testcase jepang_ending_c:
 testcase aset_prolog:
     # Nama file apa adanya; beberapa bg memakai tanda hubung dan/atau .jpeg.
     $ assert renpy.loadable("images/bg/rumah.jpg")
+    $ assert renpy.loadable("images/bg/bg-kelas_pagi.png")
     $ assert renpy.loadable("images/bg/bg-kelas_sore.png")
     $ assert renpy.loadable("images/bg/bg-kelas_malam.jpeg")
-    $ assert renpy.loadable("images/bg/koridor.png")
-    $ assert renpy.loadable("images/bg/koridor-pagi.png")
+    $ assert renpy.loadable("images/bg/bg-kelas_jadwal.png")
+    $ assert renpy.loadable("images/bg/bg-kelas_ramai.jpeg")
+    $ assert renpy.loadable("images/bg/bg-koridor-pagi.png")
+    $ assert renpy.loadable("images/bg/bg-koridor-sore.png")
     $ assert renpy.loadable("images/bg/koridor-malam.png")
     $ assert renpy.loadable("images/bg/gerbang-malam.png")
     $ assert renpy.loadable("images/bg/bg-kantin_sore.jpeg")
@@ -314,10 +317,13 @@ testcase aset_prolog:
     $ assert renpy.loadable("images/char/sakuraba_puas.png")
 
     $ assert _aset("bg/rumah", None) == "images/bg/rumah.jpg"
+    $ assert _aset("bg/bg-kelas_pagi", None) == "images/bg/bg-kelas_pagi.png"
     $ assert _aset("bg/bg-kelas_sore", None) == "images/bg/bg-kelas_sore.png"
     $ assert _aset("bg/bg-kelas_malam", None) == "images/bg/bg-kelas_malam.jpeg"
-    $ assert _aset("bg/koridor", None) == "images/bg/koridor.png"
-    $ assert _aset("bg/koridor-pagi", None) == "images/bg/koridor-pagi.png"
+    $ assert _aset("bg/bg-kelas_jadwal", None) == "images/bg/bg-kelas_jadwal.png"
+    $ assert _aset("bg/bg-kelas_ramai", None) == "images/bg/bg-kelas_ramai.jpeg"
+    $ assert _aset("bg/bg-koridor-pagi", None) == "images/bg/bg-koridor-pagi.png"
+    $ assert _aset("bg/bg-koridor-sore", None) == "images/bg/bg-koridor-sore.png"
     $ assert _aset("bg/koridor-malam", None) == "images/bg/koridor-malam.png"
     $ assert _aset("bg/gerbang-malam", None) == "images/bg/gerbang-malam.png"
     $ assert _aset("bg/bg-kantin_sore", None) == "images/bg/bg-kantin_sore.jpeg"
