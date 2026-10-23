@@ -7,6 +7,13 @@
 /game/**/*.rpyc
 /game/**/*.rpymc
 
+# Compiled bytecode cache files
+/game/cache/*.rpyb
+
+# Translation compiled files
+/game/tl/**/*.rpym
+/game/tl/**/*.rpymc
+
 # Files Ren'Py can generate.
 /game/**/*.bak
 /game/**/*.new
@@ -27,3 +34,26 @@
 
 # Artefak build web (dibuat launcher Ren'Py).
 /progressive_download.txt
+
+# Voice audio (jika ditambah nanti)
+/game/audio/voice/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts and dev tools
+VisualNovelDialogueGUI_PNG/
+tools/
